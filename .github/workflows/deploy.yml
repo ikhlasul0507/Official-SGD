@@ -1,0 +1,19 @@
+name: Example
+
+on:
+  push:
+    branches: [main]
+jobs:
+  Make:
+    runs-on: ubuntu-latest
+    name: Make Amal
+    steps:
+      - name: Checkout
+        uses: actions/checkout@main
+      - name: down
+        uses: MitchWind/ftp-deploy@master
+        with:
+            server: "ftp.bgpolsri.com"
+            username: "deploy@deploy.bgpolsri.com"
+            password: "#Q6X#TH%8B+A"
+            server_dir: "/"
